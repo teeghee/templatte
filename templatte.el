@@ -1,4 +1,4 @@
-;;; templatte.el
+;;; templatte.el -*- lexical-binding: t -*-
 
 ;; A simple emacs module for inserting template codes into your
 ;; buffer.
@@ -39,10 +39,16 @@
 (require 'ido)
 (require 'seq)
 
-(defvar templatte-templates-directory
+(defgroup templatte nil
+  "Insert template file into the current buffer."
+  :group 'convenience
+  :prefix "templatte-")
+
+(defcustom templatte-templates-directory
   (concat user-emacs-directory
           (convert-standard-filename "templates/"))
-  "Directory for the templates.")
+  "Directory for the templates."
+  :type 'directory)
 
 (defun templatte-get-available-templates (extn)
   "Return the available templates (template file names without
@@ -60,6 +66,7 @@ the buffer."
   (insert-file-contents (concat templatte-templates-directory
                                 template-filename)))
 
+;;;###autoload
 (defun templatte ()
   "Command to run templatte.  It asks user to select a template
 from the list AVAILABLE-TEMPLATES, which is determined by the
@@ -77,5 +84,9 @@ as the current file in the buffer."
 
 (unless (file-directory-p templatte-templates-directory)
   (make-directory templatte-templates-directory))
+
+(provide 'templatte)
+
+;; templatte.el ends here.
 
 
