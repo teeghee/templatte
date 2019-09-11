@@ -8,8 +8,8 @@
 ;; Author: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
 ;; Maintainer: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
 ;; Created: 9 Aug 2019
-;; Modified: 10 Aug 2019
-;; Version: 20190810
+;; Modified: 11 Sep 2019
+;; Version: 20190911
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: template
 ;; URL: https://github.com/teeghee/templatte.git
