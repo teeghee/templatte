@@ -8,8 +8,8 @@
 ;; Author: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
 ;; Maintainer: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
 ;; Created: 9 Aug 2019
-;; Modified: 11 Sep 2019
-;; Version: 20190911
+;; Modified: 12 Sep 2019
+;; Version: 20190912
 ;; Package-Requires: ((emacs "26.2"))
 ;; Keywords: template
 ;; URL: https://github.com/teeghee/templatte.git
@@ -36,7 +36,6 @@
 
 ;;; Code:
 
-(require 'ido)
 (require 'seq)
 
 (defgroup templatte nil
@@ -78,7 +77,9 @@ as the current file in the buffer."
                                current-extension)))
     (templatte-paste-template
      (concat
-      (ido-completing-read "Template: " available-templates)
+      (completing-read "Template: "
+                       (mapcar #'(lambda (x) (cons x nil))
+                               available-templates))
       "."
       current-extension))))
 
