@@ -20,6 +20,8 @@ Your templates must be located in `templatte-templates-directory`.  Initially, i
 (setq templatte-templates-directory "/your/templates/")
 ```
 
+For the sample template files, see my [dotfiles repository](https://github.com/teeghee/dotfiles/tree/master/.emacs.d/templates).
+
 Finally, add
 
 ``` emacs-lisp
