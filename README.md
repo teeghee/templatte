@@ -1,10 +1,6 @@
----
-title: Templatte
-author: Taekyung Kim <Taekyung.Kim.Maths@gmail.com>
-date: today
----
+# templatte
 
-![][./made-with-lisp-flat.svg]
+![](./made-with-lisp-flat.svg)
 
 ## Synopsis
 
