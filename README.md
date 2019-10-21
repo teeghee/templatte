@@ -1,6 +1,6 @@
 # templatte
 
-![](./made-with-lisp-flat.svg)
+![](./made-with-lisp-flat.svg "Lisp Lizard designed by Manfred Spiller")
 
 ## Synopsis
 
